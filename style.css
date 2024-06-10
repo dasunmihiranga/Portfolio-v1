@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+   
+}
+#background_body{
+    background-color: #111111;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    padding: 1rem;
+}
+
+.brand-title a {
+    color: #00FFFF;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+
+}
+.brand-title:a:hover{
+    box-shadow: 0 0 25px #fff; 
+    
+}
+
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+}
+
+.navbar-links a {
+    color: #00FFFF;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+
+.navbar-links a {
+    position: relative;
+    color: #00FFFF;
+    text-decoration: none;
+    
+}
+.navbar-links a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #00FFFF; /* Shadow color */
+    transition: height 0.3s ease;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.918);
+   
+
+}
+
+.toggle-button {
+    display: none;
+}
+
+.toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-label .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .toggle-button:checked + .toggle-label + .navbar-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .toggle-label {
+        display: flex;
+    }
+}
+.rounded-image {
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;
+}
+.frame {
+    border: 2px solid#00FFFF; /* Adds a white border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for blur effect */
+    border-radius: 20px; /* Rounds the corners of the frame */
+    padding: 20px; /* Adds padding inside the frame */
+    overflow: hidden; /* Ensures the content stays within the frame */
+    background: #111111; /* Sets the background color of the frame */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.frame:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); /* Intensifies the shadow on hover */
+}
+
+.rounded-image {
+    border-radius: 50%; /* Makes the image corners rounded */
+    width: 100%; /* Ensures the image fits within the frame */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    
+}
+
+.rounded-image:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+    /* box-shadow: #00FFFF; */
+}
+
+#Name {
+    color: #00FFFF !important; /* Setting the text color to cyan */
+    font-family: Oswald ;
+    
+    
+}
+
+#Name:hover {
+    text-shadow: 2cap 2cap 2cap rgb(255, 255, 255);
+}
+.line {
+    border-top: 1px solid #ece8e8; /* Adjust thickness and color as needed */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+#aboutme{
+    color: #fff !important;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tech-button {
+    flex: 1 1 30px;
+    max-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #00FFFF;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .tech-button:hover{
+    background-color: #00FFFF;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.918);
+    transition: all 0.3s ease;
+  }
+  
+  .tech-button img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tech-button span {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .tech-button {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
